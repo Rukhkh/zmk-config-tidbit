@@ -1,0 +1,52 @@
+/ {
+
+    encoder_1_top_row: encoder_1_top_row {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <96>;
+        status = "disabled";
+    };
+
+    encoder_1: encoder_1 {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 14 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 16 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <96>;
+        status = "okay";
+    };
+
+    /* dentless encoder */
+    encoder_2: encoder_2 {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 8 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 9 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <96>;
+        status = "okay";
+    };
+
+    /* dentless encoder */
+    encoder_3: encoder_3 {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 3 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 2 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <96>;
+        status = "okay";
+    };
+
+    encoder_4: encoder_4 {
+        compatible = "alps,ec11";
+        a-gpios = <&pro_micro 1 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 0 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <96>;
+        status = "okay";
+    };
+
+    sensors: sensors {
+        compatible = "zmk,keymap-sensors";
+        triggers-per-rotation = <24>;
+    };
+
+
+};
+
