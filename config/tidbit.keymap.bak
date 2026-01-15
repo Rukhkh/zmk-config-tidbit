@@ -22,9 +22,9 @@
 */
 
 
-// &encoder_2 {
-//     status = "okay";
-// };
+&encoder_2 {
+    status = "okay";
+};
 
 &encoder_3 {
     status = "okay";
@@ -37,7 +37,7 @@
 
 /* Add any encoder(s) you have enabled to the sensors node, separated by spaces. */
 &sensors {
-    sensors = <&encoder_1>, <&encoder_3>, <&encoder_4>;
+    sensors = <&encoder_1>, <&encoder_2>, <&encoder_3>, <&encoder_4>;
 };
 
 / {
@@ -53,7 +53,7 @@
                 &kp C_MUTE      &kp A           &kp KP_DOT      &kp KP_ENTER
             >;
 
-            sensor-bindings = <&inc_dec_kp A X &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
          func_layer {
@@ -65,7 +65,7 @@
                 &kp C_MUTE      &none           &none           &none
              >;
 
-            sensor-bindings = <&inc_dec_kp A X &inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN &inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
          };
     };
 };
