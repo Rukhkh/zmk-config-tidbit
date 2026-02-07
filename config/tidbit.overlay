@@ -1,27 +1,29 @@
-   // &encoder_1_top_row {
-   //      steps = <24>;
-   //  };
+/ {
 
-   &encoder_1 {
-        steps = <92>;
+    encoder_1_top_row: encoder_1_top_row {
+        steps = <96>;
+        status = "disabled";
     };
 
-   /* dentless encoder */
-   &encoder_2 {
-        steps = <92>;
+    encoder_1: encoder_1 {
+        steps = <96>;
     };
 
     /* dentless encoder */
-   &encoder_3 {
-        steps = <92>;
+    encoder_2: encoder_2 {
+        steps = <96>;
     };
 
-   &encoder_4 {
-        steps = <92>;
+    /* dentless encoder */
+    encoder_3: encoder_3 {
+        steps = <96>;
     };
 
-    &sensors {
+    encoder_4: encoder_4 {
+        steps = <96>;
+    };
+
+    sensors: sensors {
+	compatible = "zmk,keymap-sensors";
         triggers-per-rotation = <24>;
-
-
     };
